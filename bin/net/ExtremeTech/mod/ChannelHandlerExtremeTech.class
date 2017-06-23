@@ -1,0 +1,30 @@
+Ęţşľ   3 ‡  4net/ExtremeTech/mod/ChannelHandlerExtremeTech  ;cpw/mods/fml/common/network/FMLIndexedMessageToMessageCodec *$SWITCH_TABLE$cpw$mods$fml$relauncher$Side [I <init> ()V Code
+     LineNumberTable LocalVariableTable this 6Lnet/ExtremeTech/mod/ChannelHandlerExtremeTech; 
+encodeInto s(Lio/netty/channel/ChannelHandlerContext;Lnet/ExtremeTech/mod/IPacketTestEnvironmentMod;Lio/netty/buffer/ByteBuf;)V 
+Exceptions  java/lang/Exception    -net/ExtremeTech/mod/IPacketTestEnvironmentMod   
+writeBytes (Lio/netty/buffer/ByteBuf;)V ctx (Lio/netty/channel/ChannelHandlerContext; packet /Lnet/ExtremeTech/mod/IPacketTestEnvironmentMod; data Lio/netty/buffer/ByteBuf; 
+decodeInto s(Lio/netty/channel/ChannelHandlerContext;Lio/netty/buffer/ByteBuf;Lnet/ExtremeTech/mod/IPacketTestEnvironmentMod;)V  $ %  	readBytes
+  '  ( ()[I
+ * , + $cpw/mods/fml/common/FMLCommonHandler - . instance (()Lcpw/mods/fml/common/FMLCommonHandler;
+ * 0 1 2 getEffectiveSide  ()Lcpw/mods/fml/relauncher/Side;
+ 4 6 5 cpw/mods/fml/relauncher/Side 7 8 ordinal ()I
+ : < ; net/minecraft/client/Minecraft = > getMinecraft "()Lnet/minecraft/client/Minecraft;	 : @ A B 	thePlayer 2Lnet/minecraft/client/entity/EntityClientPlayerMP;  D E F 
+executeClient -(Lnet/minecraft/entity/player/EntityPlayer;)V H J I &io/netty/channel/ChannelHandlerContext K L channel ()Lio/netty/channel/Channel;	 N P O +cpw/mods/fml/common/network/NetworkRegistry Q R NET_HANDLER Lio/netty/util/AttributeKey; T V U io/netty/channel/Channel W X attr 7(Lio/netty/util/AttributeKey;)Lio/netty/util/Attribute; Z \ [ io/netty/util/Attribute ] ^ get ()Ljava/lang/Object; ` !net/minecraft/network/INetHandler b *net/minecraft/network/NetHandlerPlayServer	 a d e f playerEntity ,Lnet/minecraft/entity/player/EntityPlayerMP;  h i F 
+executeServer 
+netHandler #Lnet/minecraft/network/INetHandler; 
+StackMapTable V(Lio/netty/channel/ChannelHandlerContext;Lio/netty/buffer/ByteBuf;Ljava/lang/Object;)V
+  o ! " V(Lio/netty/channel/ChannelHandlerContext;Ljava/lang/Object;Lio/netty/buffer/ByteBuf;)V
+  r  	  t  
+ 4 v w x values !()[Lcpw/mods/fml/relauncher/Side;	 4 z { | CLIENT Lcpw/mods/fml/relauncher/Side;	 4 ~  | SERVER  java/lang/NoSuchFieldError  
+SourceFile %ChannelHandlerTestEnvironmentMod.java 	Signature nLcpw/mods/fml/common/network/FMLIndexedMessageToMessageCodec<Lnet/ExtremeTech/mod/IPacketTestEnvironmentMod;>; !     
+          	   /     *· 
+±           \ 
+                      	   T     ,-ą  ±       
+    `  a 
+   *                             ! "  	   Ű     b-,ą # ¸ &¸ )¶ /¶ 3.Ş      M            '-¸ 9´ ?ą C § )+ą G ˛ Mą S ą Y Ŕ _:-Ŕ a´ cą g ±       "    e  f 
+ f , h 8 i ; k S l a o 
+   4    b       b      b       b    S  j k  l    ,%A ! m  	   +     *+,-Ŕ ¶ n±            
+     A  p        	   +     *+,Ŕ -¶ q±            
+       (  	        0˛ sYĆ °W¸ uľĽ
+K*˛ y¶ 3O§ W*˛ }¶ 3O§ W*Ył s°     €  & ) €         \ 
+      l    H ‚˙   ‚  € K €       „ …    †
